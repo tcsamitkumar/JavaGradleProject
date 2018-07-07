@@ -9,7 +9,6 @@ public class LibraryTest {
     @Test
     public void testSomeLibraryMethod() throws Exception {
         Library classUnderTest = new Library();
-        //assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
         System.out.println("Test Gradle");
         Assert.assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
         
