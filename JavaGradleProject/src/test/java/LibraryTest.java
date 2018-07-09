@@ -14,11 +14,24 @@ public class LibraryTest {
         
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+        /*
         driver.get("http://www.google.com");
         driver.findElement(By.id("lst-ib")).sendKeys("facebook");
         driver.findElement(By.id("lst-ib")).sendKeys(Keys.ESCAPE);
         driver.findElement(By.id("gbqfbb")).click();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
+        */
+        
+        driver.get("http://ccsit.farmersinsurance.com/cc/ClaimCenter.do");
+        driver.findElement(By.id("Login:LoginScreen:LoginDV:username-inputEl")).sendKeys("JACOB.JONES");
+        driver.findElement(By.id("Login:LoginScreen:LoginDV:password-inputEl")).sendKeys("gw");
+        driver.findElement(By.id("Login:LoginScreen:LoginDV:submit-btnInnerEl")).click();
+        Thread.sleep(3000);
+        
+        driver.findElement(By.id(":TabLinkMenuButton-btnIconEl")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.id("TabBar:LogoutTabBarLink-textEl")).click();
+        Thread.sleep(3000);
         driver.quit();
     }
 }
